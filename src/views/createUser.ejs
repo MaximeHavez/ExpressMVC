@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <%-include('./header.ejs') %>
+</head>
+<body>
+<%-include('./navbar.ejs')  %>
+<h1 class="text-center mt-3">Création d'un utilisateur</h1>
+
+<p class="d-flex justify-content-center">
+    <form class="d-flex justify-content-center gap-2" method="post" action="/users/addNewUser">
+        <div class="col-4">
+            <div class="mb-3">
+                <label for="prenomNom" class="form-label">Prenom Nom</label>
+                <input type="text" name="penomNom" class="form-control border-primary" id="prenomNom" value="toto" tabindex="1">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">e-mail</label>
+                <input type="email" name="email" class="form-control border-primary" id="email" value="havez.maxime@gmail.com" tabindex="3">
+            </div>
+
+            <h5>Adresse</h5>
+            <div class="mb-3">
+                <label for="street" class="form-label">Rue</label>
+                <input type="text" name="street" class="form-control border-primary" id="street" value="14 rue Ernest Lemaire" tabindex="5">
+            </div>
+            <div class="mb-3">
+                <label for="town" class="form-label">Ville</label>
+                <input type="text" name="town" class="form-control border-primary" id="town" value="provin" tabindex="7">
+            </div>
+
+            <h5>Contact</h5>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Numéro de téléphone</label>
+                <input type="number" name="phone" class="form-control border-primary" id="phone" value="0754822198" tabindex="9">
+            </div>
+
+            <h5>Société</h5>
+            <div class="mb-3">
+                <label for="company" class="form-label">Nom</label>
+                <input type="text" name="company" class="form-control border-primary" id="company" value="M2i" tabindex="11">
+            </div>
+            <button class="btn btn-primary mt-3">Créer l'utilisateur</button>
+        </div>
+
+        <div class="col-4">
+            <div class="mb-3">
+                <label for="pseudo" class="form-label">Pseudo</label>
+                <input type="text" name="pseudo" class="form-control border-primary" id="pseudo" value="Anathoe" tabindex="2">
+            </div>
+            <div class="mb-3">
+                <label for="photo" class="form-label">Photo</label>
+                <input type="url" name="photo" class="form-control border-primary" id="photo" value="" tabindex="4">
+            </div>
+
+            <div class="mb-3 mt-5">
+                <label for="suite" class="form-label">Suite</label>
+                <input type="number" name="suite" class="form-control border-primary" id="suite" value="325" tabindex="6">
+            </div>
+            <div class="mb-3">
+                <label for="zipcode" class="form-label">Code Postal</label>
+                <input type="number" name="zipcode" class="form-control border-primary" id="zipode" value="59185" tabindex="8">
+            </div>
+
+            <div class="mb-3 mt-5">
+                <label for="website" class="form-label">Site Web</label>
+                <input type="text" name="website" class="form-control border-primary" id="website" value="www.anathoe.org" tabindex="10">
+            </div>
+
+            <div class="mb-3 mt-5">
+                <label for="slogan" class="form-label">Slogan</label>
+                <input type="text" name="slogan" class="form-control border-primary" id="slogan" value="Mieux vaut tard que jamais" tabindex="12">
+            </div>
+
+        </div>
+
+    </form>
+</p>
+</body>
+</html>

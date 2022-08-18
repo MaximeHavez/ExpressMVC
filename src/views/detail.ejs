@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <%-include('./header.ejs') %>
+</head>
+<body>
+<%-include('./navbar.ejs')  %>
+<h1 class="text-center mt-3">Detail de l'utilisateur</h1>
+
+<div class="d-flex justify-content-center mt-3">
+
+
+
+        <div class="d-flex flex-row justify-content-center card border-primary col-4" style="width: 60rem;">
+
+            <div class="col-6">
+                <img style="height: 100%" src="<%= user.photo %>">
+            </div>
+
+            <div class="card-body col-5">
+                <h5 class="card-title fw-bolder fs-3"><%= user.name %> <span class="fs-6">"<%= user.username%>"</span></h5>
+
+                <p> <span class="fs-5 fw-bolder">Adresse :</span> <br/>
+                    <%= user.address.street %> </br>
+                    <%= user.address.suite %> </br>
+                    <%= user.address.city %> <%= user.address.zipcode %>
+                </p>
+
+                <p> <span class="fs-5 fw-bolder">Adresse Mail :</span> <br/>
+                    <%= user.email %>
+                </p>
+
+                <p> <span class="fs-5 fw-bolder">Tel :</span> <br/>
+                    <%= user.phone %>
+                </p>
+
+                <p> <span class="fs-5 fw-bolder">Site Web :</span> <br/>
+                    <%= user.website %>
+                </p>
+
+            </div>
+        </div>
+
+</div>
+<p>
+
+</p>
+
+
+</body>
+</html>
